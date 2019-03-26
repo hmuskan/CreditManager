@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.TransferActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:id="@+id/transferCredits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="70dp"
+            android:hint="Enter Credits to be transferred" />
+
+        <TextView
+            android:text="Select User"
+            android:paddingRight="20dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/userSelectText"
+            android:layout_toLeftOf="@id/spinner"
+            android:layout_alignTop="@id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="198dp"
+            android:layout_height="34dp"
+            android:layout_below="@id/transferCredits"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <Button
+            android:id="@+id/transfer_activity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:text="Transfer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
